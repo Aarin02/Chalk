@@ -78,7 +78,7 @@ All work starts from an [issue](https://github.com/BeNikk/Chalk/issues). Issues 
 
 1. Find one that isn't assigned to anyone.
 2. Comment: *"I'd like to work on this."*
-3. Wait for a maintainer to assign it to you before you start.
+3. Maintainers might assign you to fix the task.
 4. Work on **one issue at a time**.
 
 If you get stuck or lose interest, just comment so someone else can pick it up. No hard feelings.
