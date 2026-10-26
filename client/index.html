@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chalk: write anything, under a name you choose</title>
+    <meta name="description" content="Chalk is our campus writing wall. Rants, poems, half-thoughts, music and campus fixes, posted under a handle." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Caveat:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Chalk
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a class="nav-link nav-link--extra" href="feed.html">Feed</a>
+          <a class="nav-link nav-link--extra" href="rules.html">Rules</a>
+          <a class="nav-link" href="login.html">Log in</a>
+          <a class="button button--primary button--small" href="login.html">Start writing</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero: the first thing people see. -->
+      <section class="hero">
+        <div class="container fade-in">
+          <h1>Write anything.<br />Under a name you choose.</h1>
+          <p class="lead">
+            Chalk is our campus writing wall. Rants, poems, half-thoughts, the song stuck in your head,
+            the tap that's been broken since August.
+          </p>
+          <div class="actions">
+            <a class="button button--primary" href="login.html">Start writing</a>
+            <a class="button" href="feed.html">Read the feed</a>
+          </div>
+
+          <div class="hero-crowd">
+            <img class="illustration" src="illustrations/reader.svg" alt="" />
+            <img class="illustration" src="illustrations/writer.svg" alt="" />
+            <img class="illustration" src="illustrations/coffee.svg" alt="" />
+            <img class="illustration" src="illustrations/explainer.svg" alt="" />
+            <img class="illustration" src="illustrations/hoodie.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Labels: every post gets one. -->
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Pick a label. Say the thing.</h2>
+            <p class="lead">Every post gets a label, so you can read the mood you're in.</p>
+          </div>
+
+          <!-- Each label is a sticky note stuck to the wall. -->
+          <div class="sticky-wall">
+            <div class="sticky-note" data-label="rant">
+              <h3>#rant</h3>
+              <p>Let it out. The mess food, the 8am class, the Wi-Fi.</p>
+            </div>
+            <div class="sticky-note" data-label="poetry">
+              <h3>#poetry</h3>
+              <p>Verse, free or otherwise. Nobody's grading this.</p>
+            </div>
+            <div class="sticky-note" data-label="mess">
+              <h3>#mess</h3>
+              <p>Half-thoughts and doodles in words. It doesn't have to make sense.</p>
+            </div>
+            <div class="sticky-note" data-label="music">
+              <h3>#music</h3>
+              <p>What's on repeat, and why you can't stop.</p>
+            </div>
+            <div class="sticky-note" data-label="fixit">
+              <h3>#fixit</h3>
+              <p>Something on campus that needs fixing. Say it so it gets fixed.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>A small corner of the internet, just for us.</h2>
+          </div>
+
+          <div class="card-grid">
+            <article class="card">
+              <div class="art tint-green">
+                <img class="illustration" src="illustrations/hoodie.svg" alt="" />
+              </div>
+              <div class="card-body">
+                <h3>Your own page</h3>
+                <p>Pick a theme and make your page as loud or as calm as you are.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="art tint-purple">
+                <img class="illustration" src="illustrations/reader.svg" alt="" />
+              </div>
+              <div class="card-body">
+                <h3>One shared feed</h3>
+                <p>Everything the campus is writing, newest first. Filter by label.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="art tint-yellow">
+                <img class="illustration" src="illustrations/explainer.svg" alt="" />
+              </div>
+              <div class="card-body">
+                <h3>Fix the campus</h3>
+                <p>Broken fan? Endless queue? Post it under #fixit so the right people see it.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How names work: honest about what moderators can see. -->
+      <section class="section">
+        <div class="container split">
+          <div class="art tint-blue">
+            <img class="illustration" src="illustrations/coffee.svg" alt="" />
+          </div>
+          <div>
+            <h2>How names work</h2>
+            <ul class="check-list">
+              <li>You log in with your account, so everyone here is from campus.</li>
+              <li>You post under a handle. Other students only ever see the handle.</li>
+              <li>
+                Moderators can see which account is behind a handle, but only look in serious cases.
+                It's in the <a href="rules.html">rules</a>.
+              </li>
+              <li>It's a nickname, not a mask. On a small campus, people may still recognise how you write.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Open source: invite students to build it. -->
+      <section class="section">
+        <div class="container split">
+          <div>
+            <h2>Built by students, in the open.</h2>
+            <p class="lead">
+              Chalk is open source and built by our open source guild. Your first contribution could be a theme,
+              a drawing for this page, or a bug fix.
+            </p>
+            <div class="actions">
+              <a class="button" href="https://github.com/BeNikk/Chalk">Contribute on GitHub</a>
+            </div>
+          </div>
+          <div class="art tint-red">
+            <img class="illustration" src="illustrations/idea.svg" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Chalk, made on campus.</p>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="rules.html">Rules</a>
+          <a href="https://github.com/BeNikk/Chalk">GitHub</a>
+        </nav>
+        <p>
+          Illustrations: <a href="https://www.openpeeps.com/">Open Peeps</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

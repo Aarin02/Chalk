@@ -1,0 +1,148 @@
+/* base.css: variables, reset and text styles.
+  ===== New to CSS variables? Scroll to the bottom of this page =====
+*/
+
+:root {
+  /* Colors */
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --text: #191919;
+  --text-muted: #5f5e5b;
+  --border: #e6e3dd;
+
+  /* Primary buttons. Yellow is light, so the button text is dark. */
+  --accent: #f5d469;
+  --accent-hover: #ecc544;
+  --accent-text: var(--text);
+
+  /* Soft tints for a little color */
+  --tint-red: #fbe4e1;
+  --tint-purple: #ece7f8;
+  --tint-green: #e2efe3;
+  --tint-blue: #ddebf6;
+  --tint-yellow: #fbf1cc;
+
+  /* Each label has its own tint */
+  --label-rant: var(--tint-red);
+  --label-poetry: var(--tint-purple);
+  --label-mess: var(--tint-green);
+  --label-music: var(--tint-blue);
+  --label-fixit: var(--tint-yellow);
+
+  /* Fonts (loaded from Google Fonts in each page's <head>) */
+  --font-heading: "Bricolage Grotesque", sans-serif;
+  --font: "DM Sans", sans-serif;
+  --font-hand: "Caveat", cursive;
+
+  --text-sm: 0.875rem;
+  --text-lg: 1.25rem;
+  /* clamp(min, preferred, max) shrinks headings on small screens */
+  --text-h1: clamp(2.5rem, 7vw, 4.75rem);
+  --text-h2: clamp(1.75rem, 4vw, 2.75rem);
+  --text-h3: 1.25rem;
+
+  /* Spacing */
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --radius: 8px;
+  --radius-lg: 14px;
+  --content-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: var(--text-h1);
+}
+
+h2 {
+  font-size: var(--text-h2);
+}
+
+h3 {
+  font-size: var(--text-h3);
+}
+
+a {
+  color: inherit;
+}
+
+/* 
+THE PROBLEM
+  Say our dark text color is #191919, and we use it in many places:
+
+      body   { color: #191919; }
+      .card  { border-color: #191919; }
+      .logo  { color: #191919; }
+
+  If we want a different color later, we have to find and change every copy.
+  Miss one, and the site looks broken.
+
+  THE FIX: give the color a name, once
+  At the top of the file we write:
+
+      :root {
+        --text: #191919;
+      }
+
+  - :root means "the whole page", so the name works everywhere.
+  - --text is the name we picked. Variable names always start with two dashes.
+
+  Then, wherever we need that color, we use the name inside var( ):
+
+      body   { color: var(--text); }
+      .card  { border-color: var(--text); }
+      .logo  { color: var(--text); }
+
+  Now changing #191919 in ONE place changes it on the whole site.
+  Think of it like a contact in your phone: you call "Mom", not the number.
+  If the number changes, you update the contact once.
+
+  WHY CHALK NEEDS THIS: themes
+  A theme file just gives the same names new values, for example:
+
+      --bg: black;
+      --text: white;
+
+  Every part of the page that uses var(--bg) and var(--text) switches colors,
+  without the theme touching any other CSS. That's why a whole theme fits in one small file.
+
+  All of Chalk's variables are in the :root block below. */

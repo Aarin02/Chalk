@@ -1,0 +1,132 @@
+/* layout.css: where things go. Header, sections, grids, footer. */
+
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+/* Header */
+
+.site-header {
+  position: sticky; /* stays at the top while you scroll */
+  z-index: 1; /* above the tilted notes and people as they scroll under it */
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+/* Sections */
+
+.section {
+  padding: var(--space-8) 0;
+}
+
+.section-heading {
+  max-width: 640px;
+  margin: 0 auto var(--space-7);
+  text-align: center;
+}
+
+/* Hero */
+
+.hero {
+  padding-top: var(--space-8);
+  text-align: center;
+}
+
+.hero .lead {
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.hero .actions {
+  justify-content: center;
+}
+
+/* The row of people. flex-end lines up their bottoms, like they share a floor. */
+.hero-crowd {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: var(--space-2);
+  margin-top: var(--space-7);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-crowd .illustration {
+  width: 180px;
+}
+
+/* Grids */
+
+/* As many 240px+ columns as fit: one on a phone, three on a laptop. */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: var(--space-5);
+}
+
+/* Two equal columns, side by side */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* Footer */
+
+.site-footer {
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.site-footer .container,
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+/* Phones */
+
+@media (max-width: 720px) {
+  .section {
+    padding: var(--space-7) 0;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .nav-link--extra {
+    display: none;
+  }
+
+  /* Three people instead of five */
+  .hero-crowd .illustration {
+    width: 30%;
+  }
+
+  .hero-crowd .illustration:nth-child(n + 4) {
+    display: none;
+  }
+}
