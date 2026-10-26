@@ -205,4 +205,4 @@ Themes only change the personal page. The rest of the site stays the same for ev
 - **Not sure where to start?** Ask in the guild group, or open an issue with your question.
 - **Git went wrong?** It happens to everyone. Ask, and someone will help you untangle it.
 
-Thank you for helping build Chalk!
+Thank you for helping build Chalk, Welcome to your Open source journey!

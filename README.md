@@ -22,7 +22,7 @@ Chalk is built by the students of the open source guild. It's small on purpose, 
   | `#fixit` | Something on campus that needs fixing |
 
 - **Your own page:** a personal page you can dress up with a theme. Each theme is one CSS file, and anyone can add a new one.
-- **Text and images** to start. Audio and video links come later.
+- **Text and images** to start. Audio and video links come later(scoped for future).
 
 ### How names work
 
@@ -51,6 +51,7 @@ Chalk is being built step by step, in the open.
 | Backend API, database, tests | Planned |
 
 Many features are deliberately left unbuilt so they can become starter issues for new contributors.
+Open to ideas as a separate discussion forum
 
 ---
 
